@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   content: [
     './app/**/*.{js,ts,jsx,tsx}', 
     './pages/**/*.{js,ts,jsx,tsx}',
@@ -7,7 +7,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        mycustom: '#123456',
+        myGray: '#D9D9D9',
       },
     },
   },
