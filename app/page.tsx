@@ -1,12 +1,16 @@
 "use client"
 import Header from './components/Header';
+import Hero from './components/Hero';
+import BackgroundStripes from './components/BackgroundStripes';
 
 export default function Home() {
 
   return (
-    <div className="">
+    <div>
+      <BackgroundStripes />
       <Header />
-      <main className="">
+      <Hero />
+      <main>
         
       </main>
       

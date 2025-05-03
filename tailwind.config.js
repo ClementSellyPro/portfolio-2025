@@ -9,6 +9,9 @@ export default {
       colors: {
         myGray: '#D9D9D9',
       },
+      fontSize: {
+        portfolioTitle: 256
+      }
     },
   },
   plugins: [],
