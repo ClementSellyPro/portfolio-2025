@@ -7,10 +7,10 @@ export default function Home() {
 
   return (
     <div>
-      <BackgroundStripes />
       <Header />
-      <Hero />
       <main>
+        <BackgroundStripes />
+        <Hero />
         
       </main>
       
