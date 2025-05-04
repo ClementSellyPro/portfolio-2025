@@ -59,3 +59,16 @@ body {
 .portfolio-bottom-text {
   font-size: 24px;
 }
+
+@keyframes fadeOutColor {
+  0% {
+    background-color: var(--current-color);
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+
+.fade-out {
+  animation: fadeOutColor 0.5s ease-out forwards;
+}
