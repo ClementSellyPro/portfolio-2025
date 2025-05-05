@@ -30,7 +30,7 @@ export default function Stripe({index, color, currentColor, setCurrentColor, col
       key={index}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      className={`${isLeaving ? 'transition-colors duration-700' : ''}`}
+      className={`${isLeaving ? 'transition-colors duration-1000' : ''} h-[100vh]`}
       style={{
         backgroundColor: isHovered ? colors[currentColor] : 'transparent'
       }}

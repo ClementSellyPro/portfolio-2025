@@ -42,11 +42,13 @@ body {
 
 .logo-name, .nav-item {
   font-family: 'CODE', sans-serif;
+  color: #272727;
 }
 
 .portfolio-title {
   font-family: 'Palmore', sans-serif;
   font-size: 256px;
+  color: #272727;
 }
 .portfolio-date {
   font-family: "Murecho", sans-serif;
@@ -55,12 +57,13 @@ body {
 .portfolio-subtitle, .portfolio-bottom-text {
   font-family: 'MurechoLight', sans-serif;
   font-size: 36px;
+  color: #272727;
 }
 .portfolio-bottom-text {
   font-size: 24px;
 }
 
-@keyframes fadeOutColor {
+/* @keyframes fadeOutColor {
   0% {
     background-color: var(--current-color);
   }
@@ -71,4 +74,14 @@ body {
 
 .fade-out {
   animation: fadeOutColor 0.5s ease-out forwards;
+} */
+
+.page-title {
+  font-family: 'CODE', sans-serif;
+  font-size: 64px;
+}
+
+.projects-page {
+  background-color: #272727;
+  color: #ffffff;
 }

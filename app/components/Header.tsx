@@ -14,7 +14,7 @@ export default function Header() {
     <motion.header 
       initial={{ y: -50, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.3, delay: 0.3, ease: 'easeOut'}}
+      transition={{ duration: 0.3, ease: 'easeOut'}}
       className='flex justify-between px-24 pt-18'>
       <div className='logo-name select-none flex flex-col text-4xl h-fit relative z-30'><span>CLEMENT</span> <span>SELLY</span></div>
       <div className='flex items-center gap-14 relative z-30'>
