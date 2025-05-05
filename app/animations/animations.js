@@ -1,6 +1,6 @@
 // Menu animations ==============================================================
 
-import { scale } from 'framer-motion';
+import { scale, transform } from 'framer-motion';
 
 export const navContainer = {
   hidden: {},
@@ -32,7 +32,7 @@ export const titleContainer = {
 export const letter = {
   hidden: { scale: 1 },
   visible: { 
-    scale: [1, 1.1, 1], 
+    y: [0, -20, 0], 
     transition: {
       duration: 0.5,
       ease: 'easeOut'

@@ -2,7 +2,7 @@
 import Header from './components/Header';
 import Hero from './components/Hero';
 import BackgroundStripes from './components/BackgroundStripes';
-import ProjectsPage from './components/projects/ProjectsPage';
+import ProjectsPageContainer from './components/projects/ProjectsPageContainer';
 
 export default function Home() {
 
@@ -15,7 +15,7 @@ export default function Home() {
       </div>
 
       <main>
-        <ProjectsPage />
+        <ProjectsPageContainer />
       </main>
       
     </div>

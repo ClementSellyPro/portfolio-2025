@@ -28,21 +28,21 @@ export default function Hero() {
         <motion.p 
           className='portfolio-date mt-42'
           initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x:0, transition: {delay: 0.7} }}>
+          animate={{ opacity: 1, x:0, transition: {delay: 0.9} }}>
             2025
         </motion.p>
       </div>
       <motion.h2 
-        className='portfolio-subtitle text-[256px] -mt-14'
+        className='portfolio-subtitle -mt-14'
         initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y:0, transition: {delay: 0.7} }}
+        animate={{ opacity: 1, y:0, transition: {delay: 1.2} }}
         >
         Développeur Web Fullstack
       </motion.h2>
       <motion.p 
         className='portfolio-bottom-text absolute bottom-2'
         initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y:0, transition: {delay: 1.5} }}
+        animate={{ opacity: 1, y:0, transition: {delay: 2} }}
         >
         Découvrons ensemble mes projets et mon savoir faire
       </motion.p>

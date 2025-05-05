@@ -2,6 +2,7 @@
 import { motion } from 'framer-motion';
 import { navContainer, navItem } from '@/app/animations/animations';
 import { SetStateAction, Dispatch } from 'react';
+import Link from 'next/link';
 
 type PropsType = {
   isOpen: boolean, 
@@ -9,7 +10,11 @@ type PropsType = {
 }
 
 export default function Menu({isOpen, setIsOpen}: PropsType) {
-  const navLinks = ['ACCUEIL', 'PROJETS', 'A PROPOS', 'CONTACT'];
+  const navLinks = [
+    {title:'ACCUEIL', link: '/'}, 
+    { title:'PROJETS', link: '#projects'}, 
+    { title:'A PROPOS', link: '#about' }, 
+    { title: 'CONTACT', link: '#contact' }];
 
   function openMenu (e: React.MouseEvent<HTMLDivElement>) {
     e.stopPropagation();
@@ -35,12 +40,13 @@ export default function Menu({isOpen, setIsOpen}: PropsType) {
           className={`flex flex-col gap-4 text-4xl text-center`}>
             {
               navLinks.map((item, index) => (
-              <motion.span
-                key={index}
-                variants={navItem}
-                className="nav-item relative cursor-pointer after:content-[''] after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-black after:transition-all after:duration-300 hover:after:w-full">
-                  {item}
-              </motion.span>)
+                <Link href={item.link} key={index}>
+                  <motion.span
+                    variants={navItem}
+                    className="nav-item relative cursor-pointer after:content-[''] after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-black after:transition-all after:duration-300 hover:after:w-full">
+                      {item.title}
+                  </motion.span>
+                </Link>)
               )
             }
         </motion.nav>
