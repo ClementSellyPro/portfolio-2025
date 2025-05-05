@@ -45,10 +45,8 @@ body {
   color: #272727;
 }
 
-.portfolio-title {
+.portfolio-title, .contact-mail {
   font-family: 'Palmore', sans-serif;
-  font-size: 256px;
-  color: #272727;
 }
 .portfolio-date {
   font-family: "Murecho", sans-serif;
@@ -59,7 +57,7 @@ body {
   font-size: 36px;
   color: #272727;
 }
-.project-indicator {
+.project-indicator, .contact-message {
   font-family: 'MurechoLight', sans-serif;
 }
 .portfolio-bottom-text {

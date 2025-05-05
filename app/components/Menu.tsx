@@ -1,7 +1,7 @@
 "use client"
 import { motion } from 'framer-motion';
 import { navContainer, navItem } from '@/app/animations/animations';
-import { SetStateAction, Dispatch } from 'react';
+import { SetStateAction, Dispatch, useEffect } from 'react';
 import Link from 'next/link';
 
 type PropsType = {
@@ -26,6 +26,22 @@ export default function Menu({isOpen, setIsOpen}: PropsType) {
       setIsOpen(true);
     }
   }
+
+  useEffect(() => {
+    function handleScroll() {
+      if (isOpen) {
+        setIsOpen(false);
+      }
+    }
+
+    if (isOpen) {
+      window.addEventListener('scroll', handleScroll);
+    }
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [isOpen, setIsOpen]);
 
   return (
     <div onClick={(e: React.MouseEvent<HTMLDivElement>) => openMenu(e)} className={`${isOpen ? "w-72 h-80 rounded-3xl bg-gray-200" : "w-26 h-13 rounded-4xl" }  border-black border-1 hover:bg-gray-300 transition-all duration-300

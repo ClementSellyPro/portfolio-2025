@@ -16,7 +16,7 @@ export default function ProjectsPage({titlePage}: {titlePage: string}) {
   }
 
   return (
-    <div className="projects-page h-[100vh] text-white w-full flex flex-col items-center relative" style={{ backgroundColor: bgColor }}>
+    <div className="projects-page h-[105vh] text-white w-full flex flex-col items-center relative" style={{ backgroundColor: bgColor }}>
       <div className='flex flex-col gap-10'>
         <h2 className='page-title text-center pt-12 pb-0 text-white'>{titlePage}</h2>
         <a href={"https://kalipro.re"}  target='_blank'>
@@ -49,7 +49,7 @@ export default function ProjectsPage({titlePage}: {titlePage: string}) {
       {/* Arrows */}
       <div className='absolute top-[35vh] right-20 flex flex-col items-center gap-5'>
           <Link href="">
-            <Image src={'icon/arrow-up.svg'} alt='Arrow navigation' width={50} height={50} />
+            <Image className='hover:-translate-y-2 transition-all' src={'icon/arrow-up.svg'} alt='Arrow navigation' width={50} height={50} />
           </Link>
 
           <p className='text-[32px] project-indicator'><span>1</span>/<span>3</span></p>
