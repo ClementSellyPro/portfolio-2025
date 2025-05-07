@@ -18,11 +18,15 @@ export default function ProjectsPage({titlePage}: {titlePage: string}) {
   return (
     <div className="projects-page h-[105vh] text-white w-full flex flex-col items-center relative" style={{ backgroundColor: bgColor }}>
       <div className='flex flex-col gap-10'>
-        <h2 className='page-title text-center pt-12 pb-0 text-white'>{titlePage}</h2>
+        {
+          titlePage ? <h2 className='page-title text-center pt-12 pb-0'>{titlePage}</h2> 
+          : <div className='h-28 w-full'></div>
+        }
+        
         <a href={"https://kalipro.re"}  target='_blank'>
           <div className='relative group custom-cursor' onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
             <h3 className='text-[96px] absolute top-50 -left-60 z-10 drop-shadow-2xl group-hover:left-10 transition-all duration-600 select-none'>Kalipro.re</h3>
-            <Image className='filter brightness-50 rounded-md hover:brightness-80 transition-all duration-150' src={'/picture/kalipro.png'} alt='Project illustration' width={820} height={450} />
+            <Image className='filter brightness-90 rounded-md hover:brightness-70 transition-all duration-150' src={'/picture/kalipro.png'} alt='Project illustration' width={820} height={450} />
           </div>
         </a>
 
@@ -41,9 +45,10 @@ export default function ProjectsPage({titlePage}: {titlePage: string}) {
         </div>
 
         {/* Description */}
-        <p className='w-[800px]'>
+        <p className='w-[820px] -mt-5'>
         Mon premier gros projet, que j’ai réalisé en NextJS. Il s’agit d’une plateforme qui met en lien les artisans et les clients.
         Ce projet m’a permis d’apprendre énormément, notamment configurer un serveur VPS.
+        La version en ligne n'implémente pas encore de base de donnée. Mais une page admin a été développé permettant un ajout dynamique grâce à MongoDB.
         </p>
       </div>
       {/* Arrows */}

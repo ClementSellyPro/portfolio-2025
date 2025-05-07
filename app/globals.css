@@ -45,7 +45,7 @@ body {
   color: #272727;
 }
 
-.portfolio-title, .contact-mail {
+.portfolio-title, .contact-mail, .about-stylish-word {
   font-family: 'Palmore', sans-serif;
 }
 .portfolio-date {
@@ -57,7 +57,7 @@ body {
   font-size: 36px;
   color: #272727;
 }
-.project-indicator, .contact-message {
+.project-indicator, .contact-message, .about-text, .tool-title {
   font-family: 'MurechoLight', sans-serif;
 }
 .portfolio-bottom-text {

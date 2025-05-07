@@ -1,29 +1,58 @@
+"use client"
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion'
+import { useEffect, useState } from 'react';
 
 export default function ContactPage() {
-  const address = "clement.selly@gmail.com"
-
+  const address = "clement.selly@gmail.com";
+  const letterDelay = 0.1;
+  const pauseDelay = 1;
+  
+  // État pour contrôler l'animation en cours
+  const [isAnimating, setIsAnimating] = useState(true);
+  
+  // Calcul de la durée totale d'un cycle avant pause
+  const animationDuration = address.length * letterDelay + 0.5;
+  
+  // Gérer les cycles d'animation avec pause entre chaque cycle
+  useEffect(() => {
+    let timer;
+    
+    if (!isAnimating) {
+      timer = setTimeout(() => {
+        setIsAnimating(true);
+      }, pauseDelay * 1000); // Pause avant de redémarrer
+    } else {
+      timer = setTimeout(() => {
+        setIsAnimating(false);
+      }, animationDuration * 1000); // Durée pour terminer un cycle complet
+    }
+    
+    return () => clearTimeout(timer);
+  }, [isAnimating, pauseDelay, animationDuration]);
+  
   return (
     <div id='contact' className='flex flex-col items-center justify-around h-[100vh] bg-[#272727] text-white'>
       <h2 className='page-title text-center'>CONTACT</h2>
 
       <div>
-        <p className='contact-message text-[32px]'>N’hésitez pas à me contacter directement via mon adresse mail</p>
+        <p className='contact-message text-[22px] text-center'>N’hésitez pas à me contacter directement via mon adresse mail</p>
         {/* link to mailto */}
-        <motion.a className='contact-mail text-[128px]' href='mailto:clement.selly@gmail.com'>
+        <motion.a className='contact-mail text-[128px] hover:border rounded-full px-10 pb-4' href='mailto:clement.selly@gmail.com'>
           {
-            address.split("").map((char, index) => (
-              <motion.span 
-              key={index}
-              animate={{ y: [0, -20, 0] }}
-              transition={{
-                duration: 1,
-                repeat: Infinity,
-                repeatType: "loop",
-                ease: "easeInOut",
-                delay: index * 0.1}}
+            address.split("").map((char, i) => (
+              <motion.span
+              key={`${char}-${i}`}
+              animate={isAnimating ? {
+                y: [0, -20, 0],
+                transition: {
+                  duration: 0.5,
+                  delay: i * letterDelay,
+                  ease: "easeInOut",
+                }
+              } : { y: 0 }}
+              className="inline-block"
               >
                 {char}
               </motion.span>
@@ -56,3 +85,20 @@ export default function ContactPage() {
     </div>
   )
 }
+
+// address.split("").map((char, index, arr) => (
+//   <motion.span 
+//   key={index}
+//   animate={{ y: [0, -10, 0] }}
+//   transition={{
+//     duration: 1,
+//     repeat: Infinity,
+//     repeatType: "loop",
+//     ease: "easeInOut",
+//     delay: index * 0.1,
+//     repeatDelay: index === arr.length - 1 ? 1 : 0}}
+//   style={{ display: 'inline-block' }}
+//   >
+//     {char}
+//   </motion.span>
+// ))
