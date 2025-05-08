@@ -1,13 +1,34 @@
+"use client"
+import { useEffect, useState } from 'react';
 import ProjectsPage from './ProjectsPage';
+import { ProjectType } from '@/app/type/ProjectType';
 
 export default function ProjectsPageContainer() {
-  const numberOfProjects = 3;
+  const [numberOfProjects, setNumberOfProjects] = useState<number>(1);
+  const [projectsData, setProjectsData] = useState<ProjectType[] | null>(null);
+
+  useEffect(() => {
+    const fetchProjects = async () => {
+      const response = await fetch('/projects.json');
+      const data = await response.json();
+      setProjectsData(data);
+      setNumberOfProjects(data.length);
+    }
+
+    fetchProjects();
+  }, [])
 
   return (
-    <div id='projects' className={`h-[cal(105vh)*${numberOfProjects}] bg-[#272727]`}>
-      <ProjectsPage titlePage='PROJETS' />
+    <div id='projects' className={`bg-[#272727]`}>
+      {
+        projectsData?.map((project, index) => (
+          <ProjectsPage key={index} titlePage='' projectData={project} numberOfProjects={numberOfProjects} />
+        ))
+      }
+
+      {/* <ProjectsPage titlePage='PROJETS' />
       <ProjectsPage titlePage='' />
-      <ProjectsPage titlePage='' />
+      <ProjectsPage titlePage='' /> */}
     </div>
   )
 }

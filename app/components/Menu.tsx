@@ -34,12 +34,20 @@ export default function Menu({isOpen, setIsOpen}: PropsType) {
       }
     }
 
+    function handleEsc(e: KeyboardEvent) {
+      if(e.key === 'Escape') {
+        setIsOpen(false);
+      }
+    }
+
     if (isOpen) {
       window.addEventListener('scroll', handleScroll);
+      window.addEventListener('keydown', (e: KeyboardEvent) => handleEsc(e));
     }
 
     return () => {
       window.removeEventListener('scroll', handleScroll);
+      window.addEventListener('keydown', (e: KeyboardEvent) => handleEsc(e));
     };
   }, [isOpen, setIsOpen]);
 
