@@ -26,7 +26,7 @@ export default function ProjectsPage({titlePage}: {titlePage: string}) {
         <a href={"https://kalipro.re"}  target='_blank'>
           <div className='relative group custom-cursor' onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
             <h3 className='text-[96px] absolute top-50 -left-60 z-10 drop-shadow-2xl group-hover:left-10 transition-all duration-600 select-none'>Kalipro.re</h3>
-            <Image className='filter brightness-90 rounded-md hover:brightness-70 transition-all duration-150' src={'/picture/kalipro.png'} alt='Project illustration' width={820} height={450} />
+            <Image className='filter brightness-80 rounded-md hover:brightness-65 transition-all duration-150' src={'/picture/kalipro.png'} alt='Project illustration' width={820} height={450} />
           </div>
         </a>
 

@@ -39,7 +39,7 @@ export default function ContactPage() {
       <div>
         <p className='contact-message text-[22px] text-center'>N’hésitez pas à me contacter directement via mon adresse mail</p>
         {/* link to mailto */}
-        <motion.a className='contact-mail text-[128px] hover:border rounded-full px-10 pb-4' href='mailto:clement.selly@gmail.com'>
+        <motion.a className='contact-mail text-[128px] hover:border rounded-full px-18 pb-4' href='mailto:clement.selly@gmail.com'>
           {
             address.split("").map((char, i) => (
               <motion.span

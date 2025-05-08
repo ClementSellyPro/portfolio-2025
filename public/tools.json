@@ -1,0 +1,42 @@
+[
+  {
+    "name": "React JS",
+    "color": "#D1F5FF",
+    "logo": "/icon/tool/react.svg"
+  },
+  {
+    "name": "Next JS",
+    "color": "#E5E5E5",
+    "logo": "/icon/tool/nextjs.svg"
+  },
+  {
+    "name": "TypeScript",
+    "color": "#BCE4FF",
+    "logo": "/icon/tool/typescript.svg"
+  },
+  {
+    "name": "TailwindCSS",
+    "color": "#C9EEFF",
+    "logo": "/icon/tool/tailwindcss.svg"
+  },
+  {
+    "name": "Node JS",
+    "color": "#CAEDBC",
+    "logo": "/icon/tool/nodejs.svg"
+  },
+  {
+    "name": "Express",
+    "color": "#E5E5E5",
+    "logo": "/icon/tool/express.svg"
+  },
+  {
+    "name": "MongoDB",
+    "color": "#B0DDD0",
+    "logo": "/icon/tool/mongodb.svg"
+  },
+  {
+    "name": "Figma",
+    "color": "#E3E3E3",
+    "logo": "/icon/tool/figma.svg"
+  }
+]
