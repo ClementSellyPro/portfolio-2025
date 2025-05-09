@@ -34,7 +34,7 @@ export default function ContactPage() {
   
   return (
     <div id='contact' className='flex flex-col items-center justify-around h-[100vh] bg-[#272727] text-white'>
-      <h2 className='page-title text-center'>CONTACT</h2>
+      <h2 className='page-title text-center lg:text-[64px] text-[36px]'>CONTACT</h2>
 
       <div>
         <p className='contact-message text-[22px] text-center'>N’hésitez pas à me contacter directement via mon adresse mail</p>

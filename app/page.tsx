@@ -9,7 +9,7 @@ import ContactPage from './components/contact/ContactPage';
 export default function Home() {
 
   return (
-    <div className='relative'>
+    <div className='relative scroll-smooth'>
       <div className="relative h-[100vh]">
         <BackgroundStripes />
         <Header />

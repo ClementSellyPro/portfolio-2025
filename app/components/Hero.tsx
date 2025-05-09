@@ -9,7 +9,7 @@ export default function Hero() {
       <div className='flex items-center'>
 
         <motion.h1 
-          className='portfolio-title flex space-x-1 text-[256px] text-[#272727]' 
+          className='portfolio-title flex space-x-1 lg:text-[256px] text-[96px] text-[#272727]' 
           variants={titleContainer} 
           initial="hidden" 
           animate="visible">
@@ -26,21 +26,21 @@ export default function Hero() {
         </motion.h1>
 
         <motion.p 
-          className='portfolio-date mt-42'
+          className='portfolio-date lg:mt-42 mt-14 lg:text-[16px] text-[12px]'
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x:0, transition: {delay: 0.9} }}>
             2025
         </motion.p>
       </div>
       <motion.h2 
-        className='portfolio-subtitle -mt-14'
+        className='portfolio-subtitle lg:-mt-14 -mt-5 lg:text-[36px] text-[16px]'
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y:0, transition: {delay: 1.2} }}
         >
         Développeur Web Fullstack
       </motion.h2>
       <motion.p 
-        className='portfolio-bottom-text absolute bottom-2'
+        className='portfolio-bottom-text absolute bottom-2 lg:text-[24px] text-[14px]'
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y:0, transition: {delay: 2} }}
         >

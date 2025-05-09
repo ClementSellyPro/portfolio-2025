@@ -4,7 +4,12 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { ProjectType } from '@/app/type/ProjectType';
 
-export default function ProjectsPage({titlePage, projectData, numberOfProjects}: {titlePage: string, projectData: ProjectType, numberOfProjects: number}) {
+type PropsType = {
+  projectData: ProjectType, 
+  numberOfProjects: number
+} 
+
+export default function ProjectsPage({projectData, numberOfProjects}: PropsType) {
   const [bgColor, setBgColor] = useState('#272727');
 
   function onMouseEnter() {
@@ -20,14 +25,21 @@ export default function ProjectsPage({titlePage, projectData, numberOfProjects}:
     <div id={`project${projectData.id}`} className="projects-page h-[105vh] text-white w-full flex flex-col items-center relative" style={{ backgroundColor: bgColor }}>
       <div className='flex flex-col gap-10'>
         {
-          titlePage ? <h2 className='page-title text-center pt-12 pb-0'>{titlePage}</h2> 
+          projectData.id === '1' ? <h2 className='page-title text-center pt-12 pb-0 lg:text-[64px] text-[36px]'>PROJETS</h2> 
           : <div className='h-28 w-full'></div>
         }
         
         <a href={projectData.link}  target='_blank'>
           <div className='relative group custom-cursor' onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
             <h3 className='text-[82px] absolute top-50 -left-60 z-10 drop-shadow-2xl group-hover:left-10 transition-all duration-600 select-none'>{ projectData.title }</h3>
-            <Image className='filter brightness-80 rounded-md hover:brightness-65 transition-all duration-150' src={ projectData.image } alt='Project illustration' width={820} height={450} />
+
+            <div className='relative lg:w-[824px] lg:h-[447px] w-[336px] h-[182px]'>
+              <Image 
+                className='filter brightness-80 rounded-md hover:brightness-65 transition-all duration-150' src={ projectData.image } 
+                alt='Project illustration' 
+                fill sizes="(max-width: 1024px) 336px, 824px" />
+            </div>
+            
           </div>
         </a>
 
@@ -37,7 +49,7 @@ export default function ProjectsPage({titlePage, projectData, numberOfProjects}:
             projectData.technologies.map((techno, index) => (
               <span 
                 key={index}
-                className='border border-white py-1 px-4 rounded-full'
+                className='border border-white py-1 px-4 rounded-full lg:text-base text-[10px]'
                 >
                 {techno}
               </span>
@@ -46,12 +58,12 @@ export default function ProjectsPage({titlePage, projectData, numberOfProjects}:
         </div>
 
         {/* Description */}
-        <p className='w-[820px] -mt-5'>
+        <p className='w-[820px] -mt-5 lg:text-base text-[12px]'>
         { projectData.description }
         </p>
       </div>
       {/* Arrows */}
-      <div className='absolute top-[35vh] right-20 flex flex-col items-center gap-5'>
+      <div className='absolute lg:top-[35vh] top-[60vh] lg:right-20 right-10 flex flex-col items-center gap-5'>
         {
           projectData.id === "1" ? null 
           : 

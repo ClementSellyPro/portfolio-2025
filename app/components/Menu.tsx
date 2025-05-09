@@ -52,7 +52,7 @@ export default function Menu({isOpen, setIsOpen}: PropsType) {
   }, [isOpen, setIsOpen]);
 
   return (
-    <div onClick={(e: React.MouseEvent<HTMLDivElement>) => openMenu(e)} className={`${isOpen ? "w-72 h-80 rounded-3xl bg-gray-200" : "w-26 h-13 rounded-4xl" }  border-black border-1 hover:bg-gray-300 transition-all duration-300
+    <div onClick={(e: React.MouseEvent<HTMLDivElement>) => openMenu(e)} className={`${isOpen ? "lg:w-72 lg:h-80 w-56 h-60 rounded-3xl bg-gray-200" : "lg:w-26 lg:h-13 w-[50px] h-[28px] rounded-4xl" }  border-black border-1 hover:bg-gray-300 transition-all duration-300
     absolute right-0 top-0 flex justify-center items-center cursor-pointer menu-btn z-30`}>
       {
         isOpen &&
@@ -61,7 +61,7 @@ export default function Menu({isOpen, setIsOpen}: PropsType) {
           initial='hidden'
           animate='visible'
           exit={{ opacity: 0 }}
-          className={`flex flex-col gap-4 text-4xl text-center`}>
+          className={`flex flex-col gap-4 lg:text-4xl text-xl text-center`}>
             {
               navLinks.map((item, index) => (
                 <Link href={item.link} key={index}>
@@ -75,9 +75,9 @@ export default function Menu({isOpen, setIsOpen}: PropsType) {
             }
         </motion.nav>
       }
-      <div className='flex flex-col gap-2 absolute right-7.5 top-4 cursor-pointer'>
-        <div className={`w-10 h-1 bg-black transition-transform duration-300 ${isOpen ? 'rotate-45 translate-y-1.5' : ''}`}></div>
-        <div className={`w-10 h-1 bg-black transition-transform furation-300 ${isOpen ?'-rotate-45 -translate-y-1.5' : ''}`}></div>
+      <div className='flex flex-col gap-2 absolute lg:right-7.5 lg:top-4 right-3 top-2 cursor-pointer'>
+        <div className={`lg:w-10 lg:h-1 w-6 h-0.5 bg-black transition-transform duration-300 ${isOpen ? 'rotate-45 translate-y-1.5' : ''}`}></div>
+        <div className={`lg:w-10 lg:h-1 w-6 h-0.5 bg-black transition-transform furation-300 ${isOpen ?'-rotate-45 -translate-y-1.5' : ''}`}></div>
       </div>
     </div>
   )

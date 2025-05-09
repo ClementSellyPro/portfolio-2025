@@ -54,19 +54,14 @@ body {
 
 .portfolio-subtitle, .portfolio-bottom-text {
   font-family: 'MurechoLight', sans-serif;
-  font-size: 36px;
   color: #272727;
 }
 .project-indicator, .contact-message, .about-text, .tool-title {
   font-family: 'MurechoLight', sans-serif;
 }
-.portfolio-bottom-text {
-  font-size: 24px;
-}
 
 .page-title {
   font-family: 'CODE', sans-serif;
-  font-size: 64px;
 }
 
 .custom-cursor {

@@ -19,16 +19,13 @@ export default function ProjectsPageContainer() {
   }, [])
 
   return (
-    <div id='projects' className={`bg-[#272727]`}>
+    <div id='projects' className={`bg-[#272727] relative`}>
+      <h2 className='page-title text-center pt-12 pb-0 absolute top-10'>PROJETS</h2> 
       {
         projectsData?.map((project, index) => (
-          <ProjectsPage key={index} titlePage='' projectData={project} numberOfProjects={numberOfProjects} />
+          <ProjectsPage key={index} projectData={project} numberOfProjects={numberOfProjects} />
         ))
       }
-
-      {/* <ProjectsPage titlePage='PROJETS' />
-      <ProjectsPage titlePage='' />
-      <ProjectsPage titlePage='' /> */}
     </div>
   )
 }

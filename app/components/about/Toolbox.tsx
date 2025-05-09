@@ -24,8 +24,8 @@ export default function Toolbox() {
 
   return (
     <div className='absolute bottom-0 left-0 w-full'>
-      <h4 className='tool-title text-[32px] text-center pb-5'>Ma boîte à outils:</h4>
-      <div className='flex justify-between'>
+      <h4 className='tool-title lg:text-[24px] text-[16px] text-center pb-5'>Ma boîte à outils:</h4>
+      <div className='grid grid-cols-4 lg:grid-cols-8 w-full'>
         {
           toolsData ? toolsData?.map((tool, index) => (
             <Tool key={index} name={tool.name} color={tool.color} logo={tool.logo} />

@@ -5,14 +5,14 @@
     "logo": "/icon/tool/react.svg"
   },
   {
-    "name": "Next JS",
-    "color": "#E5E5E5",
-    "logo": "/icon/tool/nextjs.svg"
-  },
-  {
     "name": "TypeScript",
     "color": "#BCE4FF",
     "logo": "/icon/tool/typescript.svg"
+  },
+  {
+    "name": "Next JS",
+    "color": "#E5E5E5",
+    "logo": "/icon/tool/nextjs.svg"
   },
   {
     "name": "TailwindCSS",
