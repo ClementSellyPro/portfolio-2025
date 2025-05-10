@@ -36,10 +36,10 @@ export default function ContactPage() {
     <div id='contact' className='flex flex-col items-center justify-around h-[100vh] bg-[#272727] text-white'>
       <h2 className='page-title text-center lg:text-[64px] text-[36px]'>CONTACT</h2>
 
-      <div>
-        <p className='contact-message text-[22px] text-center'>N’hésitez pas à me contacter directement via mon adresse mail</p>
+      <div className='flex flex-col items-center'>
+        <p className='contact-message lg:text-[22px] text-[16px] text-center lg:w-full w-2/3'>N’hésitez pas à me contacter directement via mon adresse mail</p>
         {/* link to mailto */}
-        <motion.a className='contact-mail text-[128px] hover:border rounded-full px-18 pb-4' href='mailto:clement.selly@gmail.com'>
+        <motion.a className='contact-mail lg:text-[128px] text-[54px] hover:border rounded-full lg:px-18 px-8 pb-4' href='mailto:clement.selly@gmail.com'>
           {
             address.split("").map((char, i) => (
               <motion.span
@@ -63,7 +63,7 @@ export default function ContactPage() {
           
       {/* little bottom message with the heart */}
       <div className='flex items-center gap-4  -mb-10'>
-        <p className='contact-message text-[20px]'>Designé et développé avec passion</p>
+        <p className='contact-message lg:text-[20px] text-[14px]'>Designé et développé avec passion</p>
         <motion.p
           className='-mb-2'
           animate={{ scale: [1, 1.15, 1] }}
@@ -79,26 +79,11 @@ export default function ContactPage() {
       </div>
 
       {/* button back to the top */}
-      <Link className='absolute right-20 bottom-10' href={'/'}>
-          <Image  src={'/icon/arrow-up.svg'} alt='Arrow' width={50} height={50} />
+      <Link className='absolute lg:right-20 right-10 bottom-10' href={'/'}>
+        <div className='w-[30px] h-[30px] lg:w-[50px] lg:h-[50px] relative'>
+          <Image  src={'/icon/arrow-up.svg'} alt='Arrow' fill sizes="(max-width: 1024px) 30px, 50px" />
+        </div>
       </Link>
     </div>
   )
 }
-
-// address.split("").map((char, index, arr) => (
-//   <motion.span 
-//   key={index}
-//   animate={{ y: [0, -10, 0] }}
-//   transition={{
-//     duration: 1,
-//     repeat: Infinity,
-//     repeatType: "loop",
-//     ease: "easeInOut",
-//     delay: index * 0.1,
-//     repeatDelay: index === arr.length - 1 ? 1 : 0}}
-//   style={{ display: 'inline-block' }}
-//   >
-//     {char}
-//   </motion.span>
-// ))
