@@ -16,5 +16,14 @@
     "color": "#A26105",
     "image": "/picture/grimoire.png",
     "link": "https://github.com/ClementSellyPro/dev-web-books/tree/main"
+  },
+  {
+    "id": "3",
+    "title": "Kasa",
+    "technologies": ["REACT JS", "REACT ROUTER", "JAVASCRIPT", "SASS", "FRONTEND"],
+    "description": "Kaza est une entreprise de location. Il s'agit d'une plateforme d’appartements entre particuliers.",
+    "color": "#ff6060",
+    "image": "/picture/kaza.png",
+    "link": "https://github.com/ClementSellyPro/kasa-app"
   }
 ]

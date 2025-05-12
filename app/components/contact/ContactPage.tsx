@@ -5,32 +5,40 @@ import { motion } from 'framer-motion'
 import { useEffect, useState } from 'react';
 
 export default function ContactPage() {
+  const [copied, setCopied] = useState(false);
+  const [isAnimating, setIsAnimating] = useState(true);
   const address = "clement.selly@gmail.com";
   const letterDelay = 0.1;
   const pauseDelay = 1;
   
-  // État pour contrôler l'animation en cours
-  const [isAnimating, setIsAnimating] = useState(true);
-  
-  // Calcul de la durée totale d'un cycle avant pause
   const animationDuration = address.length * letterDelay + 0.5;
   
-  // Gérer les cycles d'animation avec pause entre chaque cycle
   useEffect(() => {
     let timer;
     
     if (!isAnimating) {
       timer = setTimeout(() => {
         setIsAnimating(true);
-      }, pauseDelay * 1000); // Pause avant de redémarrer
+      }, pauseDelay * 500); 
     } else {
       timer = setTimeout(() => {
         setIsAnimating(false);
-      }, animationDuration * 1000); // Durée pour terminer un cycle complet
+      }, animationDuration * 1000);
     }
     
     return () => clearTimeout(timer);
   }, [isAnimating, pauseDelay, animationDuration]);
+
+  function copyToClipboard() {
+    navigator.clipboard.writeText(address)
+      .then(() => {
+        setCopied(true);
+        setTimeout(() => setCopied(false), 2000);
+      })
+      .catch((err) => {
+        console.error('Failed to copy email:', err);
+      });
+  }
   
   return (
     <div id='contact' className='flex flex-col items-center justify-around h-[100vh] bg-[#272727] text-white'>
@@ -59,6 +67,13 @@ export default function ContactPage() {
             ))
           }
         </motion.a>
+        {/* button to copy the address */}
+        <button
+        onClick={copyToClipboard}
+        className="text-white px-5 py-2 mt-5 rounded-full border hover:border-none transition-all text-sm cursor-pointer"
+        >
+          {copied ? 'Copié!' : 'Copier dans le presse-papier'}
+        </button>
       </div>
           
       {/* little bottom message with the heart */}
@@ -81,7 +96,37 @@ export default function ContactPage() {
       {/* button back to the top */}
       <Link className='absolute lg:right-20 right-10 bottom-10' href={'/'}>
         <div className='w-[30px] h-[30px] lg:w-[50px] lg:h-[50px] relative'>
-          <Image  src={'/icon/arrow-up.svg'} alt='Arrow' fill sizes="(max-width: 1024px) 30px, 50px" />
+          <svg
+            viewBox="0 0 50 50"
+            className="w-full h-full hover:-translate-y-2 transition-all"
+            style={{ color: "#FFFFFF" }}
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+          >
+            <circle
+              cx="25"
+              cy="25"
+              r="24"
+              stroke="currentColor"
+              strokeWidth="2"
+            />
+            <rect
+              x="10.6428"
+              y="29.6705"
+              width="20.7472"
+              height="2.50215"
+              transform="rotate(-45 10.6428 29.6705)"
+              fill="currentColor"
+            />
+            <rect
+              x="37.6533"
+              y="30.8726"
+              width="19.9492"
+              height="2.49778"
+              transform="rotate(-135 37.6533 30.8726)"
+              fill="currentColor"
+            />
+          </svg>
         </div>
       </Link>
     </div>
