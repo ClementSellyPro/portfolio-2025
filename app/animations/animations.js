@@ -20,8 +20,9 @@ export const navItem = {
 // PORTFOLIO title animations ==============================================================
 
 export const titleContainer = {
-  hidden: {},
+  hidden: {opacity: 0},
   visible: {
+    opacity: 1,
     transition: {
       staggerChildren: 0.07,
       delay: 0.3
