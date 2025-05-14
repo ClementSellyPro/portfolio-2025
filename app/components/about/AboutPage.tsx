@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Toolbox from './Toolbox'
 
 export default function AboutPage() {
@@ -8,7 +9,10 @@ export default function AboutPage() {
         <span className='about-stylish-word lg:text-[96px] text-[48px]'>Bonjour,</span><br/>
         Je suis développeur fullstack,
         passionné par le developpement web,
-        ayant également des attraits pour le <span className='about-stylish-word lg:text-[96px] text-[48px]'>design</span>. Grâce à ma formation OpenClassrooms, j’ai pu renforcer mes compétences et les développer davantage.
+        ayant également des attraits pour le <span className='about-stylish-word lg:text-[96px] text-[48px]'>design</span>. Grâce à ma formation 
+        <span className='inline-block align-middle'>
+          <Image src={'/icon/openclassrooms.png'} alt='Openclassrooms' width={350} height={350} />
+        </span>(2025), j’ai pu renforcer mes compétences et les développer davantage. 
       </p>
       <Toolbox />
     </div>

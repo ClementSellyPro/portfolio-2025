@@ -24,7 +24,7 @@ export default function Toolbox() {
 
   return (
     <div className='absolute bottom-0 left-0 w-full'>
-      <h4 className='tool-title lg:text-[22px] text-[16px] text-center pb-5'>Ma boîte à outils:</h4>
+      <h4 className='tool-title lg:text-[22px] text-[16px] text-center pb-5'>Mes outils principaux:</h4>
       <div className='grid grid-cols-4 lg:grid-cols-8 w-full'>
         {
           toolsData ? toolsData?.map((tool, index) => (
