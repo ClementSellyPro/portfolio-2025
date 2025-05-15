@@ -165,14 +165,3 @@ export default function ProjectsPage({projectData, numberOfProjects}: PropsType)
     </div>
   )
 }
-{/* <Link href={`#project${String(parseInt(projectData.id) - 1)}`}>
-  <div className='w-[30px] h-[30px] lg:w-[50px] lg:h-[50px] relative lg:block hidden'>
-    <Image className='hover:-translate-y-2 transition-all' src={'/icon/arrow-up.svg'} alt='Arrow' fill sizes="(max-width: 1024px) 30px, 50px" />
-  </div>
-</Link> */}
-
-{/* <Link href={`#project${String(parseInt(projectData.id) + 1)}`}>
-  <div className='w-[30px] h-[30px] lg:w-[50px] lg:h-[50px] relative lg:block hidden'>
-  <Image className='hover:translate-y-2 transition-all' src={'/icon/arrow-down.svg'} alt='Arrow' fill sizes="(max-width: 1024px) 30px, 50px"  style={{ color: textColor }} />
-  </div>
-</Link> */}

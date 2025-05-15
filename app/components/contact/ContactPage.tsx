@@ -77,7 +77,7 @@ export default function ContactPage() {
       </div>
           
       {/* little bottom message with the heart */}
-      <div className='flex items-center gap-4  -mb-10'>
+      <div className='flex items-center gap-4  lg:-mb-10 -mb-15'>
         <p className='contact-message lg:text-[20px] text-[14px]'>Designé et développé avec passion</p>
         <motion.p
           className='-mb-2'
@@ -94,7 +94,7 @@ export default function ContactPage() {
       </div>
 
       {/* button back to the top */}
-      <Link className='absolute lg:right-20 right-10 bottom-10' href={'/'}>
+      <Link className='absolute lg:right-20 right-6 lg:bottom-10 bottom-6' href={'/'}>
         <div className='w-[30px] h-[30px] lg:w-[50px] lg:h-[50px] relative'>
           <svg
             viewBox="0 0 50 50"

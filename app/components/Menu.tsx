@@ -53,7 +53,7 @@ export default function Menu({isOpen, setIsOpen}: PropsType) {
 
   return (
     <div onClick={(e: React.MouseEvent<HTMLDivElement>) => openMenu(e)} className={`${isOpen ? "lg:w-72 lg:h-80 w-56 h-60 rounded-3xl bg-gray-200" : "lg:w-26 lg:h-13 w-[50px] h-[28px] rounded-4xl" }  border-black border-1 hover:bg-gray-300 transition-all duration-300
-    absolute right-0 top-0 flex justify-center items-center cursor-pointer menu-btn z-30`}>
+    absolute right-0 top-0 flex justify-center items-center cursor-pointer menu-btn z-[70]`}>
       {
         isOpen &&
         <motion.nav 
