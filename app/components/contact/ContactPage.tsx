@@ -47,7 +47,7 @@ export default function ContactPage() {
       <div className='flex flex-col items-center'>
         <p className='contact-message lg:text-[22px] text-[16px] text-center lg:w-full w-2/3'>N’hésitez pas à me contacter directement via mon adresse mail</p>
         {/* link to mailto */}
-        <motion.a className='contact-mail lg:text-[128px] text-[48px] hover:border rounded-full lg:px-18 px-8 pb-4' href='mailto:clement.selly@gmail.com'>
+        <motion.a className='contact-mail lg:text-[128px] text-[48px] border border-transparent hover:border-white rounded-full lg:px-18 px-8 pb-4' href='mailto:clement.selly@gmail.com'>
           {
             address.split("").map((char, i) => (
               <motion.span
@@ -70,7 +70,7 @@ export default function ContactPage() {
         {/* button to copy the address */}
         <button
         onClick={copyToClipboard}
-        className="text-white px-5 py-2 mt-5 rounded-full border hover:border-none transition-all text-sm cursor-pointer"
+        className="text-white px-5 py-2 mt-5 rounded-full border hover:border-transparent transition-all text-sm cursor-pointer"
         >
           {copied ? 'Copié!' : 'Copier dans le presse-papier'}
         </button>
