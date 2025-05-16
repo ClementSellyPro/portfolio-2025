@@ -5,35 +5,6 @@
   --foreground: #171717;
 }
 
-@font-face {
-  font-family: 'CODE';
-  src: url('/fonts/CODE-Bold.otf')  format('opentype');
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Palmore';
-  src: url('/fonts/Palmore-Light.otf')  format('opentype');
-  font-weight: light;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'MurechoLight';
-  src: url('/fonts/Murecho-Light.ttf')  format('opentype');
-  font-weight: light;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Murecho';
-  src: url('/fonts/Murecho-Regular.ttf')  format('opentype');
-  font-weight: light;
-  font-style: normal;
-  font-display: swap;
-}
-
 html{
   scroll-behavior: smooth;
 }
@@ -51,6 +22,7 @@ body {
 .portfolio-title, .contact-mail, .about-stylish-word {
   font-family: 'Palmore', sans-serif;
 }
+ 
 .portfolio-date {
   font-family: "Murecho", sans-serif;
 }

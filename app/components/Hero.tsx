@@ -9,7 +9,7 @@ export default function Hero() {
       <div className='flex items-center'>
 
         <motion.h1 
-          className='portfolio-title flex space-x-1 lg:text-[256px] text-[96px] text-[#272727]' 
+          className={`portfolio-title flex space-x-1 lg:text-[256px] text-[96px] text-[#272727]`} 
           variants={titleContainer} 
           initial="hidden" 
           animate="visible">
