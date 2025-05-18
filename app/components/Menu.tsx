@@ -67,7 +67,7 @@ export default function Menu({isOpen, setIsOpen}: PropsType) {
                 <Link href={item.link} key={index}>
                   <motion.span
                     variants={navItem}
-                    className="nav-item relative cursor-pointer after:content-[''] after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-black after:transition-all after:duration-300 hover:after:w-full">
+                    className="nav-item text-[#272727] relative cursor-pointer after:content-[''] after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-black after:transition-all after:duration-300 hover:after:w-full">
                       {item.title}
                   </motion.span>
                 </Link>)

@@ -11,12 +11,10 @@ html{
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
 }
 
 .logo-name, .nav-item {
   font-family: 'CODE', sans-serif;
-  color: #272727;
 }
 
 .portfolio-title, .contact-mail, .about-stylish-word {
@@ -29,7 +27,6 @@ body {
 
 .portfolio-subtitle, .portfolio-bottom-text {
   font-family: 'MurechoLight', sans-serif;
-  color: #272727;
 }
 .project-indicator, .contact-message, .about-text, .tool-title {
   font-family: 'MurechoLight', sans-serif;

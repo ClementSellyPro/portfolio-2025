@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { titleContainer, letter } from '../animations/animations';
+import { CODE, Palmore, Murecho, MurechoLight } from '../fonts'
 
 export default function Hero() {
   const title = "PORTFOLIO";
@@ -33,14 +34,14 @@ export default function Hero() {
         </motion.p>
       </div>
       <motion.h2 
-        className='portfolio-subtitle lg:-mt-14 -mt-5 lg:text-[36px] text-[16px]'
+        className='portfolio-subtitle text-[#272727] lg:-mt-14 -mt-5 lg:text-[36px] text-[16px]'
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y:0, transition: {delay: 1.2} }}
         >
         Développeur Web Fullstack
       </motion.h2>
       <motion.p 
-        className='portfolio-bottom-text absolute bottom-2 lg:text-[24px] text-[14px]'
+        className='portfolio-bottom-text text-[#272727] absolute bottom-2 lg:text-[24px] text-[14px]'
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y:0, transition: {delay: 2} }}
         >
