@@ -2,14 +2,36 @@
   {
     "id": "1",
     "title": "Kalipro.re",
-    "technologies": ["NEXT JS", "TYPESCRIPT", "TAILWINDCSS", "RESEND", "VPS", "DESIGN"],
-    "description": "Mon premier gros projet, que j’ai réalisé en NextJS. Il s’agit d’une plateforme qui met en lien les artisans et les clients. Ce projet m’a permis d’apprendre énormément, notamment configurer un serveur VPS. La version en ligne n'implémente pas encore de base de donnée. Mais une page admin a été développé permettant un ajout dynamique grâce à MongoDB.",
+    "technologies": [
+      "NEXT JS",
+      "TYPESCRIPT",
+      "TAILWINDCSS",
+      "RESEND",
+      "VPS",
+      "DESIGN"
+    ],
+    "description": "Mon premier gros projet professionnel, que j’ai réalisé en NextJS. Il s’agit d’une plateforme qui met en lien les artisans et les clients. Ce projet m’a permis d’apprendre énormément, notamment configurer un serveur VPS.",
     "color": "#E9AC44",
     "image": "/picture/kalipro.png",
     "link": "https://kalipro.re"
   },
   {
     "id": "2",
+    "title": "Nextask",
+    "technologies": [
+      "ANGULAR",
+      "TYPESCRIPT",
+      "SPRING BOOT",
+      "SPRING SECURITY",
+      "POSTGRESQL"
+    ],
+    "description": "Nesxtask est un gestionnaire de projet. Vous pouvez créer un utilisateur, et se connecter afin d'accéder à la page qui va vous permettre la gestion de votre projet.",
+    "color": "#2b99fa",
+    "image": "/picture/nextask.png",
+    "link": "https://app-nextask.netlify.app/"
+  },
+  {
+    "id": "3",
     "title": "Mon Vieux Grimoire",
     "technologies": ["JAVASCRIPT", "NODE JS", "EXPRESS", "MONGODB", "BACKEND"],
     "description": "Mon Vieux Grimoire est un projet de notation de livres. Il est possible de créer un nouvel utilisateur, afin d'ajouter un nouveau livre, ou de noter les livres existant.",
@@ -18,9 +40,15 @@
     "link": "https://github.com/ClementSellyPro/dev-web-books/tree/main"
   },
   {
-    "id": "3",
+    "id": "4",
     "title": "Kasa",
-    "technologies": ["REACT JS", "REACT ROUTER", "JAVASCRIPT", "SASS", "FRONTEND"],
+    "technologies": [
+      "REACT JS",
+      "REACT ROUTER",
+      "JAVASCRIPT",
+      "SASS",
+      "FRONTEND"
+    ],
     "description": "Kaza est une entreprise de location. Il s'agit d'une plateforme d’appartements entre particuliers.",
     "color": "#ff6060",
     "image": "/picture/kaza.png",
